@@ -1,8 +1,8 @@
-// Custom.scss
-// Option A: Include all of Bootstrap
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
 
-// Include any default variable overrides here (though functions won't be available)
+// Variables
+@import 'variables';
 
-@import "../node_modules/bootstrap/scss/bootstrap";
-
-// Then add additional custom code here
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';

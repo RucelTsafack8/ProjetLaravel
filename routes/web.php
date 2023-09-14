@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/formulaire', function () {
     return view('pages/formulaire');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

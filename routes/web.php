@@ -3,7 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 
+// Route::get('/', function () {
+//     return view('pages/home');
+// });
 Route::get('/', function () {
+    return view('base');
+});
+Route::get('/home', function () {
     return view('pages/home');
 });
 Route::get('/formulaire', function () {
@@ -12,4 +18,4 @@ Route::get('/formulaire', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

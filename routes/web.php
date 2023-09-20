@@ -11,10 +11,10 @@ Route::get('/', function () {
 });
 Route::get('/home', function () {
     return view('pages/home');
-});
+})->name('Acceuil');
 Route::get('/formulaire', function () {
     return view('pages/formulaire');
-});
+})->name('formulaire');
 
 Auth::routes();
 

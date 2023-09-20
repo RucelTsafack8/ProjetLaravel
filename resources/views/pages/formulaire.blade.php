@@ -1,5 +1,5 @@
 @extends('base')
-
+@section('title',"Inscription | " . config('app.name'))
 @section('content')
    <div class="container">
         <form class="row g-3 needs-validation" novalidate>

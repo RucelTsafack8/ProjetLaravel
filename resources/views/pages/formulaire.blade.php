@@ -1,65 +1,53 @@
 @extends('base')
 @section('title',"Inscription | " . config('app.name'))
 @section('content')
-   <div class="container">
-        <form class="row g-3 needs-validation" novalidate>
-                <h1 class="text-center text-uppercase text-info"> formulaire d'inscription</h1>
-            <div class="col-md-4 position-relative">
-            <label for="validationTooltip01" class="form-label">First name</label>
-            <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-            <div class="valid-tooltip">
-                Looks good!
-            </div>
-            </div>
-            <div class="col-md-4 position-relative">
-            <label for="validationTooltip02" class="form-label">Last name</label>
-            <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
-            <div class="valid-tooltip">
-                Looks good!
-            </div>
-            </div>
-            <div class="col-md-4 position-relative">
-            <label for="validationTooltipUsername" class="form-label">Username</label>
-            <div class="input-group has-validation">
-                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-                <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
-                <div class="invalid-tooltip">
-                Please choose a unique and valid username.
+   <div class="container d-flex w-100 justify-content-center align-items-center ms-5 py-5 mt-5">
+   <div class="col-1 py-2 ms-5 mt-1  fixed-top mt-5 py-5">
+        <a  class="text-warning float-start bg-success btn " href="/home"><i class="bi bi-arrow-left-short icon-link-hover"></i></a>
+
+    </div>
+        <form class="row g-3 needs-validation w-50 bg-secondary">
+            <h1 class="text-info text-center text-uppercase">enregistrement</h1>
+            <div class="row">
+                <!-- entrer le nom et prenoms -->
+                <div class="mt-3">
+                    <label for="NOMS" class="form-label"> Noms et Prenoms </label>
+                    <input type="text" name="NOMS" id="NOMS" class="form-control" placeholder="nom prenom">
+                </div>
+                <!-- l'email de la personne -->
+               
+                <!-- le numero de telephone -->
+                <div class="mt-3">
+                    <label for="PHONE" class="form-label"> NUMERO DE TELEPHONE </label>
+                    <input type="number" name="PHONE" id="PHONE" class="form-control" placeholder="237656317630">
+                </div>
+                <!-- la profession de la personne -->
+                <div class="mt-3">
+                    <label for="PROFESSION" class="form-label"> Professions</label>
+                    <input type="text" name="PROFESSION" id="PROFESSION" class="form-control" placeholder="nom prenom">
+                </div>
+                <!-- la date d'entrer possible -->
+                <div class="mt-3">
+                    <label for="DATE_ENTER" class="form-label"> Date entrer possible </label>
+                    <input type="date" name="DATE_ENTER" id="DATE_ENTER" class="form-control" >
+                </div>
+                <!-- la date de sortie possible -->
+                <div class="mt-3">
+                    <label for="DATE_OUT" class="form-label">Date de sortie Possible</label>
+                    <input type="date" name="DATE_OUT" id="DATE_OUT" class="form-control" >
+                </div>
+                <!-- le nombre de personne qui doivent resté durant le sejour -->
+                <div class="mt-3">
+                    <label for="NBRE_PERSON" class="form-label"> NOMBRE DE PERSONNE </label>
+                    <input type="number" name="NBRE_PERSON" id="NBRE_PERSON" class="form-control" placeholder="001">
                 </div>
             </div>
+            <div class="row mt-3 py-3">
+                <div class="col-12 d-flex w-100 justify-content-center text-align-center">
+                    <button class="btn btn-info w-25" type="submit">Validé</button>
+                </div>
             </div>
-            <div class="col-md-6 position-relative">
-            <label for="validationTooltip03" class="form-label">City</label>
-            <input type="text" class="form-control" id="validationTooltip03" required>
-            <div class="invalid-tooltip">
-                Please provide a valid city.
-            </div>
-            </div>
-            <div class="col-md-3 position-relative">
-            <label for="validationTooltip04" class="form-label">State</label>
-            <select class="form-select" id="validationTooltip04" required>
-                <option selected disabled value="">Choose...</option>
-                <option>Cameroon</option>
-                <option>Nigeria</option>
-                <option>Gabon</option>
-                <option>Congo</option>
-                <option>Tchad</option>
-                <option>Benin</option>
-            </select>
-            <div class="invalid-tooltip">
-                Please select a valid state.
-            </div>
-            </div>
-            <div class="col-md-3 position-relative">
-            <label for="validationTooltip05" class="form-label">Zip</label>
-            <input type="text" class="form-control" id="validationTooltip05" required>
-            <div class="invalid-tooltip">
-                Please provide a valid zip.
-            </div>
-            </div>
-            <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit form</button>
-            </div>
-            </form>
+            
+        </form>
    </div>
 @endsection

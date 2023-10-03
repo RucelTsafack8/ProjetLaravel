@@ -10,8 +10,13 @@
     </div>
         <div class="col-12 w-50 bg-secondary">
             <div class="mt-5 py-5">
+                <form action="" class="row">
                     <label for="EMAIL" class="form-label text-center">ENTRER VOTRE EMAIL D'ENREGISTREMENT </label>
                     <input type="email" name="EMAIL" id="" class="form-control" placeholder="nomsprenom@gmail.com">
+                <div class="col-12 d-flex w-100 justify-content-center text-align-center">
+                    <button class="btn btn-info w-25" type="submit">Validé</button>
+                </div>
+                </form>
             </div>
         </div>
     </div>

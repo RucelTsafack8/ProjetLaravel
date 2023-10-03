@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('NomPrenom');
             $table->string('Email')->unique();
-            $table->number('Telephone');
+            $table->integer('Telephone');
             $table->string('Profession');
-            $table->number('Nbr_person');
+            $table->string('Nom_utilisateur');
+            $table->string('MotDePasse');
+            $table->integer('Nbr_person');
             $table->date('Date_entrer');
             $table->date('Date_sorti');
             $table->timestamps();

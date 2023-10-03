@@ -1,5 +1,7 @@
 @extends('base')
-@section('title',"Inscription | " . config('app.name'))
+
+@section('title',"Page utilisateur | " . config('app.name'))
+
 @section('content')
     <div class="fixed-top " style="margin-top: 20px;">
         <nav class="navbar navbar-expand-lg mt-5 " style="background-color: #e3f2fd;">
@@ -33,18 +35,24 @@
             </nav>
 
     </div>
-            
+        <div class="col-1 py-2 ms-5 mt-1  fixed-top mt-5 py-5">
+            <a  class="text-warning float-start bg-success btn " href="/home"><i class="bi bi-arrow-left-short icon-link-hover"></i></a>
+
+        </div>
             <div class="container " style="margin-top: 140px;">
                 <div class="row">
                     <div class="col-12">
                         <h1 class="text-center">la page utilisateur</h1>
                     </div>
-                    @if (session()->has("success"))
-                        <p>hello wold</p>
-                    @else
-                        <p class="text-danger">apprend encore</p>
-                
+                    <div class="col-12">
+                    @if(session('status'))
+                        <div class="alert alert-danger">
+                            {{session('status')}}
+                        </div>
                     @endif
+                    </div>
+                  
+                    
                 </div>
             </div>
 @endsection

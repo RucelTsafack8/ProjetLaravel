@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('admin_email')->references('Email')->on('administrateurs');
             
             $table->string('Titre');
-            $table->string('Description');
+            $table->text('Description');
             $table->string('Photo');
 
             $table->timestamps();

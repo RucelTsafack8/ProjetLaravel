@@ -7,7 +7,7 @@
             <a  class="text-warning float-start bg-success btn " href="/home"><i class="bi bi-arrow-left-short icon-link-hover"></i></a>
 
         </div>
-        <form class="row g-3 needs-validation w-50 bg-secondary">
+        <form class="row g-3 needs-validation w-50 bg-secondary" method="post" action="/ajouter/admin">
             @csrf
             <h1 class="text-info text-center text-uppercase">enregistrement admin</h1>
             <div class="row">
@@ -18,8 +18,8 @@
                 </div>
                 <!-- l'email de la personne -->
                 <div class="mt-3">
-                    <label for="Email" class="form-label"> Professions</label>
-                    <input type="text" name="Email" id="Email" class="form-control" placeholder="nomprenom@gmail.com">
+                    <label for="Email" class="form-label"> Email </label>
+                    <input type="email" name="Email" id="Email" class="form-control" placeholder="nomprenom@gmail.com">
                 </div>
                 <!-- le numero de telephone -->
                 <div class="mt-3">

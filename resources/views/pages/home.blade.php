@@ -13,8 +13,12 @@
                 </div>
                 
                 <div class="col-12  d-flex justify-content-center align-items-center w-100 mt-3 py-4">
-                        <a href="{{route('Connexion')}}" class="w-50 btn btn-outline-warning text-uppercase">se connecter</a>
+                        <a href="/connexion" class="w-50 btn btn-outline-warning text-uppercase">se connecter</a>
                 </div>
+                <div class="col-12  d-flex justify-content-center align-items-center w-100 mt-3 py-4">
+                        <a href="{{route('Liste_locataires')}}" class="w-50 btn btn-outline-warning text-uppercase">liste locataire</a>
+                </div>
+                
         </div>
       </div>
 @endsection

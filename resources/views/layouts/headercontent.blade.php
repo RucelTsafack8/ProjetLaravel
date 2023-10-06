@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,12 +23,17 @@
 
                             </li>
                             <li class="navbar-item">
-                                <a class="nav-link  fs-3" href="{{route('Acceuil')}}">Deconnexion</a>
-
-                            </li>
-                            
+                                @if(session('adminisrateur'))
+                                    <a class="nav-link  fs-3" href="{{route('Deconnexionadmin')}}">Logout</a>
+                                @else
+                                    <a class="nav-link  fs-3" href="{{route('Deconnexion')}}">Deconnexion</a>
+                                @endif
+                            </li> 
                         </ul>
-                        
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+                        </form>
                     </div>
                 </div>
             </nav>

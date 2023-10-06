@@ -8,7 +8,7 @@
             <a  class="text-warning float-start bg-success btn " href="/home"><i class="bi bi-arrow-left-short icon-link-hover"></i></a>
 
         </div> 
-        <form action="/connecte" method="post" class="w-50 bg-secondary mt-3 py-4">
+        <form action="/connect/admin" method="post" class="w-50 bg-secondary mt-3 py-4">
             @csrf
                 @if(session('status'))
                     <div class="alert alert-success">
@@ -23,12 +23,7 @@
                 <h1 class="text-center text-info text-uppercase">connexion</h1>
                 <h5 class="text-center text-danger mt-4"></h5>
                 <div class="mt-3">
-                    <label for="Status" class="form-label" aria-label="Default select">TYPE DE COMPTE</label>
-                    <select name="Status" id="Status" class="form-select" value="">
-                        <option value="SECRET">Locataire</option>
-                        <option value="ADMIN">Gerant</option>
-                        <option value="PROPRIO" >Proprietaire</option>
-                    </select>
+                  
                 </div>
                 <div class="mt-3">
                     <label for="Email" class="form-label">EMAIL DE CONNEXION</label>
